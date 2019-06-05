@@ -1,0 +1,15 @@
+<h1>Here's a list of all your artists!</h1>
+
+<ul>
+    <% @artists.each do |artist| %>
+        <li>
+        Artist: <a href="/artists/<%= artist.id %>">
+        <%= artist.name %>
+        </a>
+        </li>
+<% end %>
+</ul>
+
+<form method="get" action="/artists/new">
+    <button type="submit">Create New Artist</button>
+</form>
